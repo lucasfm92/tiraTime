@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)"
+options: "9a1a92567da5ba281853eeb8aa848932366c22d4c906cd6a3183548b7eafb970"
+build_start_time: [1661793321, 524320125]
+build_end_time: [1661793331, 110498905]
+inputs:
+  "/Users/lucasfurtadodemacedo/Documents/tiraTime/macos/Flutter/GeneratedPluginRegistrant.swift": [1661793308, 932785987]
+  "/Users/lucasfurtadodemacedo/Documents/tiraTime/macos/Runner/AppDelegate.swift": [1646278331, 0]
+  "/Users/lucasfurtadodemacedo/Documents/tiraTime/macos/Runner/MainFlutterWindow.swift": [1646278331, 0]
