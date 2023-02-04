@@ -60,17 +60,14 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _showChart = false;
 
   List<Transaction> get _recentTransactions {
-    return _transactions.where((tr) {
-      return tr.date.isAfter(DateTime.now());
-    }).toList();
+    return _transactions.toList();
   }
 
-  _addTransaction(String title, double value, DateTime date) {
+  _addTransaction(String nome, double estrelas) {
     final newTransaction = Transaction(
       id: Random().nextDouble().toString(),
-      title: title,
-      value: value,
-      date: date,
+      nome: nome,
+      estrelas: estrelas,
     );
 
     setState(() {

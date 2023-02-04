@@ -55,12 +55,12 @@ class TransactionList extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: FittedBox(
-                        child: Text('${tr.value.toInt()}'),
+                        child: Text('${tr.estrelas.toInt()}'),
                       ),
                     ),
                   ),
                   title: Text(
-                    tr.title,
+                    tr.nome,
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   trailing: MediaQuery.of(context).size.width > 480
