@@ -11,26 +11,15 @@ class Chart extends StatelessWidget {
 
   List<Map<String, Object>> get groupedTransactions {
     return List.generate(
-      7,
+      3,
       ((index) {
-        final weekDay = DateTime.now().subtract(
-          Duration(days: index),
-        );
-
-        double totalSum = 0.0;
+        final numeroDoTime = index+1;
 
         return {
-          'day': DateFormat.E().format(weekDay)[0],
-          'value': totalSum,
+          'day': 'Time ${numeroDoTime}',
         };
       }),
-    ).reversed.toList();
-  }
-
-  double get _weekTotalValue {
-    return groupedTransactions.fold(0, (sum, tr) {
-      return sum + (tr['value'] as double);
-    });
+    );
   }
 
   @override
@@ -48,11 +37,7 @@ class Chart extends StatelessWidget {
                 return Flexible(
                   fit: FlexFit.tight,
                   child: ChartBar(
-                      label: tr['day'] as String,
-                      value: tr['value'] as double,
-                      percentage: _weekTotalValue == 0
-                          ? 0
-                          : (tr['value'] as double) / _weekTotalValue),
+                      label: tr['day'] as String,),
                 );
               }).toList()),
         ),
