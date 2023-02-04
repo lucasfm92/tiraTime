@@ -1,8 +1,6 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-
 import '../models/transaction.dart';
 
 class TransactionList extends StatelessWidget {
@@ -23,16 +21,16 @@ class TransactionList extends StatelessWidget {
                     height: 20,
                   ),
                   Text(
-                    'Nenhuma transação cadastrada',
+                    'Nenhum jogador cadastrado',
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(
                     height: 20,
                   ),
                   SizedBox(
-                    height: constraints.maxHeight * 0.6,
+                    height: constraints.maxHeight * 0.3,
                     child: Image.asset(
-                      'assets/images/waiting.png',
+                      'assets/images/bola_logo.png',
                       fit: BoxFit.cover,
                     ),
                   )
@@ -57,7 +55,7 @@ class TransactionList extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: FittedBox(
-                        child: Text('${tr.value}'),
+                        child: Text('${tr.value.toInt()}'),
                       ),
                     ),
                   ),
